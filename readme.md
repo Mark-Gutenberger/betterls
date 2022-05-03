@@ -4,9 +4,13 @@ Author: Mark Gutenberger <mark-gutenberger@outlook.com>
 readme.md (c) 2022
 Desc: readme
 Created:  2022-05-03T14:17:35.049Z
-Modified: 2022-05-03T14:18:02.268Z
+Modified: 2022-05-03T18:43:55.724Z
 -->
 
 ## colorls
 
 todo: make better readme....
+
+c plus plus.
+scripting is in javascript.
+config and supplemental files are in lua.

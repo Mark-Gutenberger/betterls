@@ -3,11 +3,11 @@
 # Makefile (c) 2022
 # Desc: description
 # Created:  2022-05-02T13:19:36.646Z
-# Modified: 2022-05-03T14:20:37.319Z
+# Modified: 2022-05-03T14:41:44.325Z
 
 SHELL = /bin/bash
 SRC_DIR = ./src/
-TARGET = $(SRC_DIR)colorls.cpp
+TARGET = colorls.cpp
 VERSION = $(shell node ./scripts/version.js)
 CXX = clang++
 OUT_DIR = ./bin/

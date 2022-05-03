@@ -1,16 +1,3 @@
-# keep project files
-!.clang-format
-!clang-format*
-!.git*
-!.gitconfig
-!.editorconfig
-!.eslintrc*
-!.prettier*
-!flutter-create.*
-!backspace.vim
-!readme.md
-### CLEAN THIS UP!!!! ^^^
-
 ###
 ## proj specific rules:
 ###
