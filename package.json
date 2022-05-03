@@ -9,6 +9,6 @@
 		"main": "yarn start",
 		"compile": "make",
 		"clean": "make clean",
-		"install": "exit 0"
+		"install": "bash ./scripts/install-deps.sh"
 	}
 }

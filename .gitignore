@@ -1,5 +1,7 @@
 ###
 ## proj specific rules:
+!./bin/main
+yarn.lock
 ###
 
 
@@ -1011,7 +1013,7 @@ compile_commands.json
 *.class
 
 # Generated files
-bin/
+# bin/
 gen/
 out/
 

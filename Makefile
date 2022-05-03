@@ -3,7 +3,7 @@
 # Makefile (c) 2022
 # Desc: description
 # Created:  2022-05-02T13:19:36.646Z
-# Modified: 2022-05-03T14:41:44.325Z
+# Modified: 2022-05-03T18:55:15.339Z
 
 SHELL = /bin/bash
 SRC_DIR = ./src/
