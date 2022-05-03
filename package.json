@@ -2,5 +2,13 @@
 	"name": "colorls",
 	"version": "1.0.0",
 	"author": "Mark Gutenberger <Mark-Gutenberger@outlook.com>",
-	"license": "GPL-3.0"
+	"license": "GPL-3.0",
+	"scripts": {
+		"colorls": "./bin/colorls",
+		"start": "yarn colorls",
+		"main": "yarn start",
+		"compile": "make",
+		"clean": "make clean",
+		"install": "exit 0"
+	}
 }
