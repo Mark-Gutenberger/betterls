@@ -3,7 +3,7 @@
 # Makefile (c) 2022
 # Desc: description
 # Created:  2022-05-02T13:19:36.646Z
-# Modified: 2022-05-03T18:55:15.339Z
+# Modified: 2022-05-03T19:19:47.156Z
 
 SHELL = /bin/bash
 SRC_DIR = ./src/
@@ -24,15 +24,13 @@ all:
 	@echo "  <app>-<platform>-<version>"
 	@echo ""
 	@echo ""
-	mkdir -p $(OUT_DIR)
 	make compile
 	@echo "$(shell date)" >> $(OUT_DIR).last-compile
 
 compile:
-	# compile
 	$(CXX) ./colorls.cpp -o $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe
-	# write generic file
 	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(OUT_DIR)colorls.exe
 
 clean:
 	rm -rf ./bin/*
+	@echo "./colorls" > ${OUT_DIR}/main

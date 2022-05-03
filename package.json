@@ -4,9 +4,7 @@
 	"author": "Mark Gutenberger <Mark-Gutenberger@outlook.com>",
 	"license": "GPL-3.0",
 	"scripts": {
-		"colorls": "./bin/colorls",
-		"start": "yarn colorls",
-		"main": "yarn start",
+		"start": "./bin/colorls",
 		"compile": "make",
 		"clean": "make clean",
 		"install": "bash ./scripts/install-deps.sh"
