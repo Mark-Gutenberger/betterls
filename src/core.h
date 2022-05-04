@@ -8,7 +8,12 @@ Modified:2022-05-03T19:06:40.400Z
 */
 
 #pragma once
+
+#define _HAS_CXX17 1
+
+#include <stdio.h>
+#include <stdlib.h>
 #include <iostream>
 #include <string>
-#include <cmath>
+
 #include "../lib/lua-5.4.4/src/lua.hpp"

@@ -3,7 +3,7 @@
 # Makefile (c) 2022
 # Desc: description
 # Created:  2022-05-02T13:19:36.646Z
-# Modified: 2022-05-03T19:19:47.156Z
+# Modified: 2022-05-04T18:40:06.007Z
 
 SHELL = /bin/bash
 SRC_DIR = ./src/
@@ -12,8 +12,11 @@ VERSION = $(shell node ./scripts/version.js)
 CXX = clang++
 OUT_DIR = ./bin/
 PLATFORM = $(shell echo ${OS})
+CXXFLAGS =  -stdlib=libc++
+LINKFLAGS = -lpthread
+# CLANGFLAGS =
 
-.PHONY: all compile clean
+.PHONY: all compile clean windows
 
 all:
 	make clean
@@ -24,13 +27,15 @@ all:
 	@echo "  <app>-<platform>-<version>"
 	@echo ""
 	@echo ""
-	make compile
+	make windows
 	@echo "$(shell date)" >> $(OUT_DIR).last-compile
 
-compile:
-	$(CXX) ./colorls.cpp -o $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe
+windows:
+	$(CXX) $(CLANGFLAGS) -c ./colorls.cpp $(LINKFLAGS) -o $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).o $(CXXFLAGS)
+	$(CXX) $(CLANGFLAGS) $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).o  $(LINKFLAGS) -o $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(CXXFLAGS)
 	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(OUT_DIR)colorls.exe
+	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(OUT_DIR)main.exe
+
 
 clean:
 	rm -rf ./bin/*
-	@echo "./colorls" > ${OUT_DIR}/main
