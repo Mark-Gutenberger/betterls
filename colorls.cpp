@@ -4,7 +4,7 @@ Author: Mark Gutenberger <mark-gutenberger@outlook.com>
 colorls.cpp (c) 2022
 Desc: main entry point for the program
 Created:  2022-05-02T13:19:54.883Z
-Modified: 2022-05-04T21:54:52.658Z
+Modified: 2022-05-05T00:45:03.899Z
 */
 
 #include "./src/core.cpp"
