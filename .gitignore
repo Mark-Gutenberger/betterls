@@ -1,7 +1,6 @@
 ###
 ## proj specific rules:
 yarn.lock
-!bin/asm/*
 .last-compile
 ###
 

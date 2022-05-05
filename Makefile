@@ -3,7 +3,7 @@
 # Makefile (c) 2022
 # Desc: description
 # Created:  2022-05-02T13:19:36.646Z
-# Modified: 2022-05-05T00:44:19.621Z
+# Modified: 2022-05-05T00:55:25.498Z
 
 SHELL = /bin/bash #! /bin/bash
 SRC_DIR = ./src/
@@ -42,6 +42,9 @@ windows:
 clean:
 	rm -rf ./bin/*
 	rm -rf ./.vs/
-	mkdir ./bin
-	mkdir ./bin/obj
-	mkdir ./bin/asm
+	mkdir -p ./bin
+	mkdir -p ./bin/obj
+	mkdir -p ./bin/asm
+
+install-deps:
+	yarn install
