@@ -1,12 +1,9 @@
 	.file	"colorls.cpp"
 	.text
-	.section	.text$_Z6printfPKcz,"x"
-	.linkonce discard
-	.globl	_Z6printfPKcz
-	.def	_Z6printfPKcz;	.scl	2;	.type	32;	.endef
-	.seh_proc	_Z6printfPKcz
-_Z6printfPKcz:
-.LFB4566:
+	.def	_ZL6printfPKcz;	.scl	3;	.type	32;	.endef
+	.seh_proc	_ZL6printfPKcz
+_ZL6printfPKcz:
+.LFB556:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	pushq	%rbx
@@ -37,11 +34,11 @@ _Z6printfPKcz:
 	popq	%rbp
 	ret
 	.seh_endproc
-	.text
+.lcomm _ZStL8__ioinit,1,1
 	.def	_wopendir;	.scl	3;	.type	32;	.endef
 	.seh_proc	_wopendir
 _wopendir:
-.LFB4605:
+.LFB6322:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -191,7 +188,7 @@ _wopendir:
 	.def	_wreaddir;	.scl	3;	.type	32;	.endef
 	.seh_proc	_wreaddir
 _wreaddir:
-.LFB4606:
+.LFB6323:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -214,7 +211,7 @@ _wreaddir:
 	.def	_wreaddir_r;	.scl	3;	.type	32;	.endef
 	.seh_proc	_wreaddir_r
 _wreaddir_r:
-.LFB4607:
+.LFB6324:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -303,7 +300,7 @@ _wreaddir_r:
 	.def	_wclosedir;	.scl	3;	.type	32;	.endef
 	.seh_proc	_wclosedir
 _wclosedir:
-.LFB4608:
+.LFB6325:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -354,7 +351,7 @@ _wclosedir:
 	.def	_wrewinddir;	.scl	3;	.type	32;	.endef
 	.seh_proc	_wrewinddir
 _wrewinddir:
-.LFB4609:
+.LFB6326:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -386,7 +383,7 @@ _wrewinddir:
 	.def	dirent_first;	.scl	3;	.type	32;	.endef
 	.seh_proc	dirent_first
 dirent_first:
-.LFB4610:
+.LFB6327:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -432,7 +429,7 @@ dirent_first:
 	.def	dirent_next;	.scl	3;	.type	32;	.endef
 	.seh_proc	dirent_next
 dirent_next:
-.LFB4611:
+.LFB6328:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -492,7 +489,7 @@ dirent_next:
 	.def	opendir;	.scl	3;	.type	32;	.endef
 	.seh_proc	opendir
 opendir:
-.LFB4612:
+.LFB6329:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	subq	$608, %rsp
@@ -566,7 +563,7 @@ opendir:
 	.def	readdir;	.scl	3;	.type	32;	.endef
 	.seh_proc	readdir
 readdir:
-.LFB4613:
+.LFB6330:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -589,7 +586,7 @@ readdir:
 	.def	readdir_r;	.scl	3;	.type	32;	.endef
 	.seh_proc	readdir_r
 readdir_r:
-.LFB4614:
+.LFB6331:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -703,7 +700,7 @@ readdir_r:
 	.def	closedir;	.scl	3;	.type	32;	.endef
 	.seh_proc	closedir
 closedir:
-.LFB4615:
+.LFB6332:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -737,7 +734,7 @@ closedir:
 	.def	rewinddir;	.scl	3;	.type	32;	.endef
 	.seh_proc	rewinddir
 rewinddir:
-.LFB4616:
+.LFB6333:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -758,7 +755,7 @@ rewinddir:
 	.def	scandir;	.scl	3;	.type	32;	.endef
 	.seh_proc	scandir
 scandir:
-.LFB4617:
+.LFB6334:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -922,7 +919,7 @@ scandir:
 	.def	alphasort;	.scl	3;	.type	32;	.endef
 	.seh_proc	alphasort
 alphasort:
-.LFB4618:
+.LFB6335:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -947,7 +944,7 @@ alphasort:
 	.def	versionsort;	.scl	3;	.type	32;	.endef
 	.seh_proc	versionsort
 versionsort:
-.LFB4619:
+.LFB6336:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -968,7 +965,7 @@ versionsort:
 	.def	dirent_mbstowcs_s;	.scl	3;	.type	32;	.endef
 	.seh_proc	dirent_mbstowcs_s
 dirent_mbstowcs_s:
-.LFB4620:
+.LFB6337:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -1030,7 +1027,7 @@ dirent_mbstowcs_s:
 	.def	dirent_wcstombs_s;	.scl	3;	.type	32;	.endef
 	.seh_proc	dirent_wcstombs_s
 dirent_wcstombs_s:
-.LFB4621:
+.LFB6338:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -1091,7 +1088,7 @@ dirent_wcstombs_s:
 	.def	dirent_set_errno;	.scl	3;	.type	32;	.endef
 	.seh_proc	dirent_set_errno
 dirent_set_errno:
-.LFB4622:
+.LFB6339:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	pushq	%rbx
@@ -1125,7 +1122,7 @@ _ZN3fmt2v86detailL17invalid_arg_indexE:
 	.def	_Z7listdirPKc;	.scl	2;	.type	32;	.endef
 	.seh_proc	_Z7listdirPKc
 _Z7listdirPKc:
-.LFB6627:
+.LFB6898:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -1178,7 +1175,7 @@ _Z7listdirPKc:
 	.def	main;	.scl	2;	.type	32;	.endef
 	.seh_proc	main
 main:
-.LFB6628:
+.LFB6899:
 	pushq	%rbp
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
@@ -1207,7 +1204,7 @@ main:
 	movq	%rax, %rdx
 	leaq	.LC2(%rip), %rax
 	movq	%rax, %rcx
-	call	_Z6printfPKcz
+	call	_ZL6printfPKcz
 	movl	-4(%rbp), %eax
 	cltq
 	salq	$3, %rax
@@ -1229,6 +1226,76 @@ main:
 	popq	%rbp
 	ret
 	.seh_endproc
+	.def	__tcf_0;	.scl	3;	.type	32;	.endef
+	.seh_proc	__tcf_0
+__tcf_0:
+.LFB7395:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$32, %rsp
+	.seh_stackalloc	32
+	.seh_endprologue
+	leaq	_ZStL8__ioinit(%rip), %rax
+	movq	%rax, %rcx
+	call	_ZNSt8ios_base4InitD1Ev
+	nop
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.def	_Z41__static_initialization_and_destruction_0ii;	.scl	3;	.type	32;	.endef
+	.seh_proc	_Z41__static_initialization_and_destruction_0ii
+_Z41__static_initialization_and_destruction_0ii:
+.LFB7394:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$32, %rsp
+	.seh_stackalloc	32
+	.seh_endprologue
+	movl	%ecx, 16(%rbp)
+	movl	%edx, 24(%rbp)
+	cmpl	$1, 16(%rbp)
+	jne	.L132
+	cmpl	$65535, 24(%rbp)
+	jne	.L132
+	leaq	_ZStL8__ioinit(%rip), %rax
+	movq	%rax, %rcx
+	call	_ZNSt8ios_base4InitC1Ev
+	leaq	__tcf_0(%rip), %rax
+	movq	%rax, %rcx
+	call	atexit
+.L132:
+	nop
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.def	_GLOBAL__sub_I__Z7listdirPKc;	.scl	3;	.type	32;	.endef
+	.seh_proc	_GLOBAL__sub_I__Z7listdirPKc
+_GLOBAL__sub_I__Z7listdirPKc:
+.LFB7396:
+	pushq	%rbp
+	.seh_pushreg	%rbp
+	movq	%rsp, %rbp
+	.seh_setframe	%rbp, 0
+	subq	$32, %rsp
+	.seh_stackalloc	32
+	.seh_endprologue
+	movl	$65535, %edx
+	movl	$1, %ecx
+	call	_Z41__static_initialization_and_destruction_0ii
+	nop
+	addq	$32, %rsp
+	popq	%rbp
+	ret
+	.seh_endproc
+	.section	.ctors,"w"
+	.align 8
+	.quad	_GLOBAL__sub_I__Z7listdirPKc
 	.ident	"GCC: (MinGW-W64 x86_64-posix-seh, built by Brecht Sanders) 11.2.0"
 	.def	__mingw_vfprintf;	.scl	2;	.type	32;	.endef
 	.def	malloc;	.scl	2;	.type	32;	.endef
@@ -1240,3 +1307,6 @@ main:
 	.def	wcstombs;	.scl	2;	.type	32;	.endef
 	.def	perror;	.scl	2;	.type	32;	.endef
 	.def	puts;	.scl	2;	.type	32;	.endef
+	.def	_ZNSt8ios_base4InitD1Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZNSt8ios_base4InitC1Ev;	.scl	2;	.type	32;	.endef
+	.def	atexit;	.scl	2;	.type	32;	.endef

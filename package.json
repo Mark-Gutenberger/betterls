@@ -5,6 +5,8 @@
 	"license": "GPL-3.0",
 	"scripts": {
 		"start": "./bin/colorls",
+		"run": "./bin/colorls",
+		"main": "./bin/colorls",
 		"compile": "make",
 		"clean": "make clean",
 		"install": "bash ./scripts/install-deps.sh"

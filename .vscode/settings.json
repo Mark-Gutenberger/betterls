@@ -78,7 +78,8 @@
 		"xiosbase": "cpp",
 		"xlocale": "cpp",
 		"xlocinfo": "cpp",
-		"xtree": "cpp"
+		"xtree": "cpp",
+		"lua.hpp": "c"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }

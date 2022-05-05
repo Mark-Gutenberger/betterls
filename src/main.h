@@ -12,12 +12,13 @@ Modified:2022-05-03T19:06:40.400Z
 #define _HAS_CXX17 1
 
 // #include <stdio.h>
+// #include <string.h>
 // #include <stdlib.h>
-// #include <iostream>
-// #include <string>
+#include <iostream>
+#include <string>
 
 // #include <sys/types.h>
 
+// #ifdef __cplusplus
 #include "../lib/dirent-1.23.2/include/dirent.h"
 #include "../lib/fmt-8.1.1/include/fmt/core.h"
-#include "../lib/lua-5.4.4/src/lua.hpp"
