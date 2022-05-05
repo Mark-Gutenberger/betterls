@@ -2,6 +2,7 @@
 ## proj specific rules:
 yarn.lock
 .last-compile
+.obsidian/
 ###
 
 
