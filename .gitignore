@@ -4,6 +4,7 @@ yarn.lock
 .last-compile
 .obsidian/
 bin/
+package-lock.json
 ###
 
 

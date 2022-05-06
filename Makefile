@@ -10,14 +10,14 @@ SRC_DIR = ./src/
 TARGET = colorls.cpp
 VERSION = $(shell node ./scripts/version.js)
 CXX = g++
-OUT_DIR = ./bin/
+PLATFORM = $(shell echo ${OS})
 OBJ_DIR = obj/
 ASM_DIR = asm/
-PLATFORM = $(shell echo ${OS})
+OUT_DIR = ./bin/$(PLATFORM)/
 CXXFLAGS =
 LINKFLAGS = -lpthread
 
-.PHONY: all compile clean windows
+.PHONY: all compile clean windows linux
 
 all:
 	make clean
@@ -29,6 +29,7 @@ all:
 	@echo ""
 	@echo ""
 	make windows
+	make linux
 	@echo "$(shell date)" >> $(OUT_DIR).last-compile
 
 windows:
@@ -37,6 +38,13 @@ windows:
 	$(CXX) -S ./colorls.cpp -o $(OUT_DIR)$(ASM_DIR)colorls-$(PLATFORM)-$(VERSION).asm $(LINKFLAGS) $(CXXFLAGS)
 	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(OUT_DIR)colorls.exe
 	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(OUT_DIR)main.exe
+
+linux:
+	$(CXX) -c ./colorls.cpp -o $(OUT_DIR)$(OBJ_DIR)colorls-$(PLATFORM)-$(VERSION).o $(LINKFLAGS) $(CXXFLAGS)
+	$(CXX) $(OUT_DIR)$(OBJ_DIR)colorls-$(PLATFORM)-$(VERSION).o -o $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(LINKFLAGS) $(CXXFLAGS)
+	$(CXX) -S ./colorls.cpp -o $(OUT_DIR)$(ASM_DIR)colorls-$(PLATFORM)-$(VERSION).asm $(LINKFLAGS) $(CXXFLAGS)
+	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(OUT_DIR)colorls
+	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(OUT_DIR)main
 
 
 clean:

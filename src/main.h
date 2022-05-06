@@ -17,8 +17,13 @@ Modified:2022-05-03T19:06:40.400Z
 #include <iostream>
 #include <string>
 
+
 // #include <sys/types.h>
 
 // #ifdef __cplusplus
+#ifdef _WIN32
 #include "../lib/dirent-1.23.2/include/dirent.h"
+#else
+#include <filesystem>
+#endif
 #include "../lib/fmt-8.1.1/include/fmt/core.h"
