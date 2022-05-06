@@ -9,17 +9,19 @@ cd lib
 rm ./* -rf
 curl -R https://codeload.github.com/tronkko/dirent/tar.gz/refs/tags/1.23.2 -o ./dirent-1.23.2.tar.gz
 tar -xf ./dirent-1.23.2.tar.gz
-curl -R https://codeload.github.com/fmtlib/fmt/tar.gz/refs/tags/8.1.1 -o ./fmt-8.1.1.tar.gz
-tar -xf ./fmt-8.1.1.tar.gz
+curl -R https://codeload.github.com/s9w/oof/tar.gz/refs/tags/second -o ./oof-2.0.0.tar.gz
+tar -xf ./oof-2.0.0.tar.gz
 
-read -p "install fmt natively?" -n 1 -r
+# read -p "install fmt natively?" -n 1 -r
 
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-	cd fmt-8.1.1
-	mkdir build -p
-	cmake .
-	make all install
-	exit 0
-then
-	exit 0
-fi
+# if [[ ! $REPLY =~ ^[Yy]$ ]]
+# 	cd fmt-8.1.1
+# 	mkdir build -p
+# 	cmake .
+# 	make all install
+# 	exit 0
+# then
+# 	exit 0
+# fi
+
+ exit 0
