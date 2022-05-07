@@ -14,12 +14,14 @@ Modified:2022-05-03T19:06:40.400Z
 // #include <stdio.h>
 // #include <string.h>
 // #include <stdlib.h>
+// #include <sys/types.h>
 #include <iostream>
 #include <string>
 
-// #include <sys/types.h>
-
-// #ifdef __cplusplus
+#ifdef _WIN32
 #include "../lib/dirent-1.23.2/include/dirent.h"
+#else
+#include <dirent.h>
+#endif
 
 #define OOF_IMPL

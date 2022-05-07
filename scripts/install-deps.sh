@@ -1,3 +1,4 @@
+#! /bin/bash
 # SPDX-License-Identifier: MIT
 # Author: Mark Gutenberger <mark-gutenberger@outlook.com>
 # install-deps.sh (c) 2022
@@ -11,17 +12,4 @@ curl -R https://codeload.github.com/tronkko/dirent/tar.gz/refs/tags/1.23.2 -o ./
 tar -xf ./dirent-1.23.2.tar.gz
 curl -R https://codeload.github.com/s9w/oof/tar.gz/refs/tags/second -o ./oof-2.0.0.tar.gz
 tar -xf ./oof-2.0.0.tar.gz
-
-# read -p "install fmt natively?" -n 1 -r
-
-# if [[ ! $REPLY =~ ^[Yy]$ ]]
-# 	cd fmt-8.1.1
-# 	mkdir build -p
-# 	cmake .
-# 	make all install
-# 	exit 0
-# then
-# 	exit 0
-# fi
-
- exit 0
+exit 0
