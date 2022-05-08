@@ -9,10 +9,8 @@ Modified:2022-05-06T12:34:00.283Z
 
 #include "main.h"
 using namespace std;
-using namespace fmt;
 
 int main() {
 	cout << "Hello, std!" << endl;
-	print("Hello, fmt!");
 	return 0;
 };

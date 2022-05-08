@@ -4,8 +4,9 @@
 # install-deps.sh (c) 2022
 # Desc: description
 # Created:  2022-05-03T18:56:11.669Z
-# Modified: 2022-05-06T14:15:28.371Z
+# Modified: 2022-05-08T17:22:36.800Z
 
+mkdir -p ./lib/
 cd lib
 rm ./* -rf
 curl -R https://codeload.github.com/tronkko/dirent/tar.gz/refs/tags/1.23.2 -o ./dirent-1.23.2.tar.gz

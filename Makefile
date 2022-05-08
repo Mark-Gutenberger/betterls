@@ -3,7 +3,7 @@
 # Makefile (c) 2022
 # Desc: description
 # Created:  2022-05-02T13:19:36.646Z
-# Modified: 2022-05-07T14:54:12.159Z
+# Modified: 2022-05-07T14:55:34.687Z
 
 SHELL = /bin/bash #! /bin/bash
 SRC_DIR = ./src/
@@ -65,3 +65,4 @@ install-deps:
 
 prebuild:
 	$(SHELL) ./scripts/prebuild.sh
+	make install-deps

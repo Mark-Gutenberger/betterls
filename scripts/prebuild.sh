@@ -6,7 +6,7 @@
 # Created:  2022-06-03T18:56:11.669Z
 # Modified: 2022-05-06T14:15:28.371Z
 
-if [ -z "$OS" ]; 
-then export OS=$(uname); 
+if [ -z "$OS" ];
+then export OS=$(uname);
 else export OS=${OS};
 fi
