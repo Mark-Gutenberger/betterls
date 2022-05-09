@@ -9,6 +9,7 @@ Modified:2022-05-03T19:06:40.400Z
 
 #pragma once
 
+#define OOF_IMPL
 // #define _HAS_CXX17 1
 
 // #include <stdio.h>
@@ -24,4 +25,5 @@ Modified:2022-05-03T19:06:40.400Z
 #include <dirent.h>
 #endif
 
-#define OOF_IMPL
+#define NOMINMAX
+#include "../lib/termcolor-2.0.0/termcolor.hpp"

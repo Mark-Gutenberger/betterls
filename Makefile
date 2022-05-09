@@ -3,7 +3,7 @@
 # Makefile (c) 2022
 # Desc: description
 # Created:  2022-05-02T13:19:36.646Z
-# Modified: 2022-05-08T19:12:38.171Z
+# Modified: 2022-05-09T18:50:17.385Z
 
 ###
 # glob consts
@@ -29,7 +29,7 @@ VERSION = $(shell . ./scripts/version.sh)
 # C++ consts
 ###
 CXX = g++
-CXXFLAGS = -std=c++17 -lpthread
+CXXFLAGS = -std=c++2a
 
 ###
 # OS consts
@@ -71,6 +71,25 @@ all:
 	@printf 'Comment out these two lines in the makefile to silence this warning.\n\n'
 	$(SETC) $(RESET)
 	make prebuild
+	$(SETC) $(YELLOW)
+	make clean
+	$(SETC) $(RESET)
+	$(SETC) $(PURPLE)
+	@printf '\nVersion: $(VERSION)\n\n'
+	@printf 'Semantic executable names use the following syntax:\n'
+	@printf '  <app>-<platform>-<version>\n\n\n'
+	$(SETC) $(RESET)
+	$(SETC) $(BLUE)
+	make linux
+	$(SETC) $(BLUE)
+	make windows
+	@echo '$(shell date)' >> $(BIN).last-compile
+	$(SETC) $(RESET)
+	$(SETC) $(GREEN)
+	@printf '\nSuccess!\n\n'
+	$(SETC) $(RESET)
+
+dev:
 	$(SETC) $(YELLOW)
 	make clean
 	$(SETC) $(RESET)

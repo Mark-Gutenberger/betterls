@@ -79,7 +79,8 @@
 		"xlocale": "cpp",
 		"xlocinfo": "cpp",
 		"xtree": "cpp",
-		"lua.hpp": "c"
+		"lua.hpp": "c",
+		"termcolor.hpp": "c"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }
