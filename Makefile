@@ -3,7 +3,7 @@
 # Makefile (c) 2022
 # Desc: description
 # Created:  2022-05-02T13:19:36.646Z
-# Modified: 2022-05-11T00:29:09.163Z
+# Modified: 2022-05-12T15:46:43.066Z
 
 ###
 # glob consts
@@ -15,7 +15,6 @@ SHELL = /bin/bash #! /bin/bash
 ###
 SRC_DIR = ./src/
 OBJ_DIR = obj/
-ASM_DIR = asm/
 BIN = ./bin/
 OUT_DIR = $(BIN)$(PLATFORM)/
 
@@ -67,11 +66,11 @@ endif
 
 all:
 	$(SETC) $(YELLOW)
-	@printf '\nWARN: if you are using a windows enviroment, colorized makefile output probably will not work.\n'
+	@printf '\nWARN: if you are using a windows enviroment, colored makefile output probably will not work.\n'
 	@printf 'Comment out these two lines in the makefile to silence this warning.\n\n'
 	$(SETC) $(RESET)
 	make prebuild
-	$(SETC) $(YELLOW)
+	$(SETC) $(BLUE)
 	make clean
 	$(SETC) $(RESET)
 	$(SETC) $(PURPLE)
@@ -80,9 +79,8 @@ all:
 	@printf '  <app>-<platform>-<version>\n\n\n'
 	$(SETC) $(RESET)
 	$(SETC) $(BLUE)
-	make linux
+	make compile
 	$(SETC) $(BLUE)
-	make windows
 	@echo '$(shell date)' >> $(BIN).last-compile
 	$(SETC) $(RESET)
 	$(SETC) $(GREEN)
@@ -99,39 +97,30 @@ dev:
 	@printf '  <app>-<platform>-<version>\n\n\n'
 	$(SETC) $(RESET)
 	$(SETC) $(BLUE)
-	make linux
+	make compile
 	$(SETC) $(BLUE)
-	make windows
-	@echo '$(shell date)' >> $(BIN).last-compile
 	$(SETC) $(RESET)
 	$(SETC) $(GREEN)
 	@printf '\nSuccess!\n\n'
 	$(SETC) $(RESET)
 
-windows:
+
+compile:
 	$(SETC) $(RESET)
 	$(CXX) -c ./colorls.cpp -o $(BIN)$(OBJ_DIR)colorls-$(PLATFORM)-$(VERSION).o  $(CXXFLAGS)
-	$(CXX) $(BIN)$(OBJ_DIR)colorls-$(PLATFORM)-$(VERSION).o -o $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe  $(CXXFLAGS)
-	$(CXX) -S ./colorls.cpp -o $(BIN)$(ASM_DIR)colorls-$(PLATFORM)-$(VERSION).asm  $(CXXFLAGS)
+	$(CXX) $(BIN)$(OBJ_DIR)colorls-$(PLATFORM)-$(VERSION).o -o $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION)  $(CXXFLAGS)
+	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(OUT_DIR)colorls
+	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(BIN)colorls
+	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(OUT_DIR)main
+	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(BIN)main
+	# copy files with 'exe' ext becuase sometimes msys does weird things
+	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe
 	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(BIN)colorls.exe
 	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(OUT_DIR)colorls.exe
 	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(BIN)main.exe
 	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(OUT_DIR)main.exe
 	$(SETC) $(RESET)
 	@printf '\n'
-
-linux:
-	$(SETC) $(RESET)
-	$(CXX) -c ./colorls.cpp -o $(BIN)$(OBJ_DIR)colorls-$(PLATFORM)-$(VERSION).o  $(CXXFLAGS)
-	$(CXX) $(BIN)$(OBJ_DIR)colorls-$(PLATFORM)-$(VERSION).o -o $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION)  $(CXXFLAGS)
-	$(CXX) -S ./colorls.cpp -o $(BIN)$(ASM_DIR)colorls-$(PLATFORM)-$(VERSION).asm  $(CXXFLAGS)
-	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(OUT_DIR)colorls
-	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(BIN)colorls
-	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(OUT_DIR)main
-	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(BIN)main
-	$(SETC) $(RESET)
-	@printf '\n'
-
 
 clean:
 	$(SETC) $(YELLOW)
@@ -141,7 +130,6 @@ clean:
 	mkdir -p ./bin
 	mkdir -p ./bin/$(PLATFORM)
 	mkdir -p ./bin/obj
-	mkdir -p ./bin/asm
 	@printf '\n'
 	$(SETC) $(RESET)
 
