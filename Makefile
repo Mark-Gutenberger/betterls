@@ -3,7 +3,7 @@
 # Makefile (c) 2022
 # Desc: description
 # Created:  2022-05-02T13:19:36.646Z
-# Modified: 2022-05-12T15:46:43.066Z
+# Modified: 2022-05-12T21:49:09.794Z
 
 ###
 # glob consts
@@ -142,6 +142,3 @@ install-deps:
 
 prebuild:
 	$(SHELL) ./scripts/prebuild.sh
-	$(SETC) $(GREEN)
-	# make install-deps
-	$(SETC) $(RESET)

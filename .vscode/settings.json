@@ -80,7 +80,8 @@
 		"xlocinfo": "cpp",
 		"xtree": "cpp",
 		"lua.hpp": "c",
-		"termcolor.hpp": "c"
+		"termcolor.hpp": "c",
+		"fstream": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }
