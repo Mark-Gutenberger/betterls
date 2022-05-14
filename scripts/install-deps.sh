@@ -4,7 +4,9 @@
 # install-deps.sh (c) 2022
 # Desc: description
 # Created:  2022-05-03T18:56:11.669Z
-# Modified: 2022-05-13T13:23:37.492Z
+# Modified: 2022-05-14T01:58:10.214Z
+
+. ./prebuild.sh # returns the OS
 
 printf "\e[33m\nruning from:\n  $(pwd)/\nmake sure you run from the root of the project.\n"
 printf "comment out these lines in \e[0m./scripts/install-deps.sh\e[33m to silence this warning\n\n\e[0m"
@@ -17,10 +19,19 @@ printf "\e[35mINFO: installing dirent-1.23.2...\n\n\e[0m"
 curl -R https://codeload.github.com/tronkko/dirent/tar.gz/refs/tags/1.23.2 -o ./dirent-1.23.2.tar.gz
 tar -xf ./dirent-1.23.2.tar.gz
 printf "\e[36m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\e[0m"
+# printf "\e[35mINFO: installing c4conf...\n\n\e[0m"
+# curl -R https://codeload.github.com/biojppm/c4conf/tar.gz/refs/tags/v0.1.0 -o ./c4conf-0.1.0.tar.gz
+# tar -xf ./c4conf-0.1.0.tar.gz
+# printf "\e[36m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\e[0m"
 printf "\e[35mINFO: installing rapidyaml...\n\n\e[0m"
-mkdir -p ./rapidyaml-0.4.1
-cd ./rapidyaml-0.4.1
-curl -RO https://github.com/biojppm/rapidyaml/releases/download/v0.4.1/rapidyaml-0.4.1.hpp
+# curl -R https://codeload.github.com/biojppm/rapidyaml/tar.gz/refs/tags/v0.4.1 -o ./rapidyaml-0.4.1.tar.gz
+# tar -xf ./rapidyaml-0.4.1.tar.gz
+git clone --recursive https://github.com/biojppm/rapidyaml.git --depth 1 ./rapidyaml-0.4.1
+cd ./rapidyaml-0.4.1/
+cmake ./samples/singleheaderlib/CMakeLists.txt -G "Unix Makefiles"
+cd ./samples/singleheaderlib/
+make
+cd ../../
 cd ../
 printf "\e[36m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\e[0m"
 printf "\e[35mINFO: installing termcolor-2.0.0...\n\n\e[0m"
