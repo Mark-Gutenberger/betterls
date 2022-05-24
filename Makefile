@@ -13,10 +13,12 @@ SHELL = /bin/bash #! /bin/bash
 ###
 # dir consts
 ###
-SRC_DIR = ./src/
-OBJ_DIR = obj/
-BIN = ./bin/
-OUT_DIR = $(BIN)$(PLATFORM)/
+_SRC = ./src/
+_BIN = ./bin/
+BIN = /bin/
+_TESTS = ./tests/
+OBJ = obj/
+OUT = $(_BIN)$(PLATFORM)/
 
 ###
 # proj consts
@@ -81,7 +83,7 @@ all:
 	$(SETC) $(BLUE)
 	make compile
 	$(SETC) $(BLUE)
-	@echo '$(shell date)' >> $(BIN).last-compile
+	@echo '$(shell date)' >> $(_BIN).last-compile
 	$(SETC) $(RESET)
 	$(SETC) $(GREEN)
 	@printf '\nSuccess!\n\n'
@@ -107,29 +109,44 @@ dev:
 
 compile:
 	$(SETC) $(RESET)
-	$(CXX) -c ./colorls.cpp -o $(BIN)$(OBJ_DIR)colorls-$(PLATFORM)-$(VERSION).o  $(CXXFLAGS)
-	$(CXX) $(BIN)$(OBJ_DIR)colorls-$(PLATFORM)-$(VERSION).o -o $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION)  $(CXXFLAGS)
-	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(OUT_DIR)colorls
-	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(BIN)colorls
-	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(OUT_DIR)main
-	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(BIN)main
+	$(CXX) -c ./colorls.cpp -o $(_BIN)$(OBJ)colorls-$(PLATFORM)-$(VERSION).o  $(CXXFLAGS)
+	$(CXX) $(_BIN)$(OBJ)colorls-$(PLATFORM)-$(VERSION).o -o $(OUT)colorls-$(PLATFORM)-$(VERSION)  $(CXXFLAGS)
+	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION) $(OUT)colorls
+	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION) $(_BIN)colorls
+	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION) $(OUT)main
+	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION) $(_BIN)main
 	# copy files with 'exe' ext becuase sometimes msys does weird things
-	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION) $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe
-	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(BIN)colorls.exe
-	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(OUT_DIR)colorls.exe
-	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(BIN)main.exe
-	$(shell) cp $(OUT_DIR)colorls-$(PLATFORM)-$(VERSION).exe $(OUT_DIR)main.exe
+	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION) $(OUT)colorls-$(PLATFORM)-$(VERSION).exe
+	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION).exe $(_BIN)colorls.exe
+	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION).exe $(OUT)colorls.exe
+	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION).exe $(_BIN)main.exe
+	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION).exe $(OUT)main.exe
+	$(SETC) $(RESET)
+	@printf '\n'
+
+test:
+	make prebuild
+	make clean
+	make test-yaml
+
+test-yaml:
+	$(SETC) $(RESET)
+	$(CXX) -c $(_TESTS)test-ryml.cpp -o $(_TESTS)$(BIN)$(OBJ)test-ryml.o  $(CXXFLAGS)
+	$(CXX) $(_TESTS)$(BIN)$(OBJ)test-ryml.o -o $(_TESTS)$(BIN)test-ryml $(CXXFLAGS)
 	$(SETC) $(RESET)
 	@printf '\n'
 
 clean:
 	$(SETC) $(YELLOW)
 	@printf '\n'
-	rm -rf ./bin/*
+	rm -rf $(_BIN)*
 	rm -rf ./.vs/
-	mkdir -p ./bin
-	mkdir -p ./bin/$(PLATFORM)
-	mkdir -p ./bin/obj
+	mkdir -p $(_BIN)
+	mkdir -p $(_BIN)$(PLATFORM)
+	mkdir -p $(_BIN)$(OBJ)
+	mkdir -p $(_TESTS)$(BIN)
+	mkdir -p $(_TESTS)$(BIN)$(PLATFORM)
+	mkdir -p $(_TESTS)$(BIN)$(OBJ)
 	@printf '\n'
 	$(SETC) $(RESET)
 

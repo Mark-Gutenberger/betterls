@@ -81,7 +81,8 @@
 		"xtree": "cpp",
 		"lua.hpp": "c",
 		"termcolor.hpp": "c",
-		"fstream": "cpp"
+		"fstream": "cpp",
+		".shellcheckrc": "shellscript"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }
