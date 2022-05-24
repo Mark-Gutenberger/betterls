@@ -9,6 +9,9 @@
 		"main": "./bin/colorls",
 		"compile": "make",
 		"clean": "make clean",
-		"install": "bash ./scripts/install-deps.sh"
+		"install": "bash ./scripts/install-deps.sh",
+		"fmt": "trunk fmt",
+		"format": "trunk fmt",
+		"lint": "trunk check"
 	}
 }
