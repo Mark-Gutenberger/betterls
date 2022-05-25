@@ -1,5 +1,8 @@
 ###
 ## proj specific rules:
+!.gitkeep
+!*.gitignore
+!**/*.gitignore
 lib/
 yarn.lock
 .obsidian/
@@ -11,7 +14,6 @@ mom
 
 .npmrc
 .NOTES
-!.gitkeep
 # Windows thumbnail cache files
 Thumbs.db
 Thumbs.db:encryptable
