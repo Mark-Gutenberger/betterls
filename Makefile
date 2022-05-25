@@ -30,7 +30,7 @@ VERSION = $(shell . ./scripts/version.sh)
 # C++ consts
 ###
 CXX = g++
-CXXFLAGS = -std=c++2a
+CXXFLAGS = -std=c++2a -lryml
 
 ###
 # OS consts
