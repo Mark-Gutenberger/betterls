@@ -1,10 +1,4 @@
 #! /bin/bash
-# SPDX-License-Identifier: MIT
-# Author: Mark Gutenberger <mark-gutenberger@outlook.com>
-# install-deps.sh (c) 2022
-# Desc: description
-# Created:  2022-05-03T18:56:11.669Z
-# Modified: 2022-05-14T01:58:10.214Z
 
 . ./prebuild.sh # returns the OS
 
