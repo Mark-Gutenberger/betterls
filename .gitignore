@@ -1,8 +1,5 @@
 ###
 ## proj specific rules:
-!.gitkeep
-!*.gitkeep
-!**/*.gitkeep
 lib/
 yarn.lock
 .obsidian/
@@ -12,6 +9,9 @@ bin/**/*
 **/bin/**/*
 package-lock.json
 mom
+!.gitkeep
+!*.gitkeep
+!**/*.gitkeep
 ###
 
 
