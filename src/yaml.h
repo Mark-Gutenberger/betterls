@@ -1,10 +1,13 @@
 #pragma once
 
-// #include <array>
+#include <fstream>
+#include <string>
 #include <iostream>
 #include <map>
 #include <sstream>
 #include <vector>
 
+#ifndef RYML_SINGLE_HDR_DEFINE_NOW
 #define RYML_SINGLE_HDR_DEFINE_NOW
-#include "../lib/rapidyaml-0.4.1/src_singleheader/ryml_all.hpp"
+#include <ryml_all.hpp>
+#endif
