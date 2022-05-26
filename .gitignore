@@ -10,6 +10,8 @@ bin/**/*
 **/bin/**/*
 package-lock.json
 mom
+main
+colorls
 ./config.yaml
 !.gitkeep
 !*.gitkeep
