@@ -7,5 +7,7 @@
 #include <sstream>
 #include <vector>
 
-#define RYML_SINGLE_HDR_DEFINE_NOW
-#include <ryml_all.hpp>
+#include "ryml.cpp"
+
+// #define RYML_SINGLE_HDR_DEFINE_NOW
+// #include <ryml_all.hpp>

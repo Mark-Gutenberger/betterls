@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/colorls/CMakeFiles /workspaces/colorls/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /workspaces/colorls && $(CMAKE_COMMAND) -E cmake_progress_start /workspaces/colorls/CMakeFiles /workspaces/colorls/src/CMakeFiles/progress.marks
+	cd /workspaces/colorls && $(MAKE) -f CMakeFiles/Makefile2 src/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/colorls/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /workspaces/colorls && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,31 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /workspaces/colorls && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /workspaces/colorls && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /workspaces/colorls && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named Project
+# Convenience name for target.
+src/CMakeFiles/Project.dir/rule:
+	cd /workspaces/colorls && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/Project.dir/rule
+.PHONY : src/CMakeFiles/Project.dir/rule
 
-# Build rule for target.
-Project: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Project
+# Convenience name for target.
+Project: src/CMakeFiles/Project.dir/rule
+
 .PHONY : Project
 
 # fast build rule for target.
 Project/fast:
-	$(MAKE) -f src/CMakeFiles/Project.dir/build.make src/CMakeFiles/Project.dir/build
+	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/Project.dir/build.make src/CMakeFiles/Project.dir/build
 .PHONY : Project/fast
+
+__/colorls.o: __/colorls.cpp.o
+
+.PHONY : __/colorls.o
+
+# target to build an object file
+__/colorls.cpp.o:
+	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/Project.dir/build.make src/CMakeFiles/Project.dir/__/colorls.cpp.o
+.PHONY : __/colorls.cpp.o
+
+__/colorls.i: __/colorls.cpp.i
+
+.PHONY : __/colorls.i
+
+# target to preprocess a source file
+__/colorls.cpp.i:
+	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/Project.dir/build.make src/CMakeFiles/Project.dir/__/colorls.cpp.i
+.PHONY : __/colorls.cpp.i
+
+__/colorls.s: __/colorls.cpp.s
+
+.PHONY : __/colorls.s
+
+# target to generate assembly for a file
+__/colorls.cpp.s:
+	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/Project.dir/build.make src/CMakeFiles/Project.dir/__/colorls.cpp.s
+.PHONY : __/colorls.cpp.s
 
 # Help Target
 help:
@@ -132,6 +161,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Project"
+	@echo "... __/colorls.o"
+	@echo "... __/colorls.i"
+	@echo "... __/colorls.s"
 .PHONY : help
 
 
@@ -143,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /workspaces/colorls && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
