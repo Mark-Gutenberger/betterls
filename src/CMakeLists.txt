@@ -2,6 +2,7 @@
 add_executable(main ../colorls.cpp)
 add_executable(colorls ../colorls.cpp)
 
+configure_file(./version.h.in ./version.h)
 
 # # Include the directory where MyLibrary project is. Otherwise, we can't use the
 # # library
@@ -9,3 +10,5 @@ add_executable(colorls ../colorls.cpp)
 
 # # Link the executable and the library together
 # target_link_libraries(Project MyLibrary)
+
+target_include_directories(colorls PUBLIC "${PROJECT_BINARY_DIR}")

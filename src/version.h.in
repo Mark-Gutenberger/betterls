@@ -1,0 +1,2 @@
+#define colorls_VERSION_MAJOR @colorls_VERSION_MAJOR@
+#define colorls_VERSION_MINOR @colorls_VERSION_MINOR@

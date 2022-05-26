@@ -114,10 +114,8 @@ struct CheckPredicate {
 		}
 	}
 };
-#define CHECK              \
-	CheckPredicate {       \
-		__FILE__, __LINE__ \
-	}
+#define CHECK \
+	CheckPredicate { __FILE__, __LINE__ }
 #endif
 #endif
 
