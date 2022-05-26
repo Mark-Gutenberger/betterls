@@ -1,6 +1,7 @@
 ###
 ## proj specific rules:
 lib/
+vcpkg/
 yarn.lock
 .obsidian/
 bin/*
@@ -13,6 +14,20 @@ mom
 !.gitkeep
 !*.gitkeep
 !**/*.gitkeep
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+# Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+*.sln
+*.vcxproj
+*.vcxproj.filters
 ###
 
 
@@ -1345,3 +1360,4 @@ typings/
 node_modules/**/*
 .expo/*
 npm-debug.*
+

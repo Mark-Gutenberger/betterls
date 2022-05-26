@@ -1,45 +1,16 @@
-# SPDX-License-Identifier: MIT
-# Author: Mark Gutenberger <mark-gutenberger@outlook.com>
-# Makefile (c) 2022
-# Desc: description
-# Created:  2022-05-02T13:19:36.646Z
-# Modified: 2022-05-12T21:49:09.794Z
-
-###
-# glob consts
-###
 SHELL = /bin/bash #! /bin/bash
-
-###
-# dir consts
-###
 _SRC = ./src/
 _BIN = ./bin/
 BIN = /bin/
 _TESTS = ./tests/
 OBJ = obj/
 OUT = $(_BIN)$(PLATFORM)/
-
-###
-# proj consts
-###
 TARGET = colorls.cpp
 VERSION = $(shell . ./scripts/version.sh)
-
-###
-# C++ consts
-###
 CXX = g++
-CXXFLAGS = -std=c++2a -lryml
-
-###
-# OS consts
-###
+CXXFLAGS = -std=c++2a
 PLATFORM = $(shell echo ${OS})
 
-###
-# colors
-###
 SETC = @printf
 ifneq (,$(findstring xterm,${TERM}))
 	BLACK               := $(shell tput -Txterm setaf 0)
@@ -158,4 +129,4 @@ install-deps:
 	@printf '\n'
 
 prebuild:
-	$(SHELL) ./scripts/prebuild.sh
+	$(SHELL) ./scripts/platform.sh
