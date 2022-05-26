@@ -111,17 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Project
+# Target rules for targets named colorls
 
 # Build rule for target.
-Project: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Project
-.PHONY : Project
+colorls: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 colorls
+.PHONY : colorls
 
 # fast build rule for target.
-Project/fast:
-	$(MAKE) -f src/CMakeFiles/Project.dir/build.make src/CMakeFiles/Project.dir/build
-.PHONY : Project/fast
+colorls/fast:
+	$(MAKE) -f src/CMakeFiles/colorls.dir/build.make src/CMakeFiles/colorls.dir/build
+.PHONY : colorls/fast
+
+#=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 # Help Target
 help:
@@ -131,7 +144,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Project"
+	@echo "... colorls"
+	@echo "... main"
 .PHONY : help
 
 

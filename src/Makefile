@@ -111,19 +111,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/Project.dir/rule:
-	cd /workspaces/colorls && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/Project.dir/rule
-.PHONY : src/CMakeFiles/Project.dir/rule
+src/CMakeFiles/colorls.dir/rule:
+	cd /workspaces/colorls && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/colorls.dir/rule
+.PHONY : src/CMakeFiles/colorls.dir/rule
 
 # Convenience name for target.
-Project: src/CMakeFiles/Project.dir/rule
+colorls: src/CMakeFiles/colorls.dir/rule
 
-.PHONY : Project
+.PHONY : colorls
 
 # fast build rule for target.
-Project/fast:
-	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/Project.dir/build.make src/CMakeFiles/Project.dir/build
-.PHONY : Project/fast
+colorls/fast:
+	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/colorls.dir/build.make src/CMakeFiles/colorls.dir/build
+.PHONY : colorls/fast
+
+# Convenience name for target.
+src/CMakeFiles/main.dir/rule:
+	cd /workspaces/colorls && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/main.dir/rule
+.PHONY : src/CMakeFiles/main.dir/rule
+
+# Convenience name for target.
+main: src/CMakeFiles/main.dir/rule
+
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 __/colorls.o: __/colorls.cpp.o
 
@@ -131,7 +146,8 @@ __/colorls.o: __/colorls.cpp.o
 
 # target to build an object file
 __/colorls.cpp.o:
-	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/Project.dir/build.make src/CMakeFiles/Project.dir/__/colorls.cpp.o
+	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/colorls.dir/build.make src/CMakeFiles/colorls.dir/__/colorls.cpp.o
+	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/__/colorls.cpp.o
 .PHONY : __/colorls.cpp.o
 
 __/colorls.i: __/colorls.cpp.i
@@ -140,7 +156,8 @@ __/colorls.i: __/colorls.cpp.i
 
 # target to preprocess a source file
 __/colorls.cpp.i:
-	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/Project.dir/build.make src/CMakeFiles/Project.dir/__/colorls.cpp.i
+	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/colorls.dir/build.make src/CMakeFiles/colorls.dir/__/colorls.cpp.i
+	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/__/colorls.cpp.i
 .PHONY : __/colorls.cpp.i
 
 __/colorls.s: __/colorls.cpp.s
@@ -149,7 +166,8 @@ __/colorls.s: __/colorls.cpp.s
 
 # target to generate assembly for a file
 __/colorls.cpp.s:
-	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/Project.dir/build.make src/CMakeFiles/Project.dir/__/colorls.cpp.s
+	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/colorls.dir/build.make src/CMakeFiles/colorls.dir/__/colorls.cpp.s
+	cd /workspaces/colorls && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/__/colorls.cpp.s
 .PHONY : __/colorls.cpp.s
 
 # Help Target
@@ -160,7 +178,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Project"
+	@echo "... colorls"
+	@echo "... main"
 	@echo "... __/colorls.o"
 	@echo "... __/colorls.i"
 	@echo "... __/colorls.s"
