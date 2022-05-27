@@ -82,7 +82,8 @@
 		"lua.hpp": "c",
 		"termcolor.hpp": "c",
 		"fstream": "cpp",
-		".shellcheckrc": "shellscript"
+		".shellcheckrc": "shellscript",
+		"*.in": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }
