@@ -4,10 +4,7 @@ lib/
 vcpkg/
 yarn.lock
 .obsidian/
-bin/*
-bin/**/*
-**/bin/*
-**/bin/**/*
+bin/
 package-lock.json
 mom
 main
