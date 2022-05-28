@@ -1,24 +1,5 @@
 #include "core.h"
 
-static void list_directory(const char* dirname);
-
-int colorls(int argc, char* argv[]) {
-	int i;
-
-	/* For each directory in command line */
-	i = 1;
-	while (i < argc) {
-		list_directory(argv[i]);
-		i++;
-	};
-
-	/* List current working directory if no arguments on command line */
-	if (argc == 1) {
-		list_directory(".");
-	};
-	return EXIT_SUCCESS;
-};
-
 /*
  * List files and directories within a directory.
  */
@@ -56,4 +37,34 @@ static void list_directory(const char* dirname) {
 		printf("Cannot open directory %s\n", dirname);
 		exit(EXIT_FAILURE);
 	};
+};
+
+int colorls(int argc, char* argv[]) {
+	// throw the version if no options are passed
+	// TODO: add a flag to throw the version
+	if (argc < 2) {
+		// report version
+		std::cout << argv[0] << " Version " << colorls_VERSION_MAJOR << "." << colorls_VERSION_MINOR << "."
+				  << colorls_VERSION_PATCH << std::endl;
+		std::cout << "Usage: " << argv[0] << " number" << std::endl;
+		return 1;
+	}
+
+	int i;
+
+	/* For each directory in command line */
+	i = 1;
+	while (i < argc) {
+		list_directory(argv[i]);
+		i++;
+	};
+
+	/* List current working directory if no arguments on command line */
+	// if (argc == 1) {
+	// 	list_directory(".");
+	// };
+
+	load_colorls_config_file("C:\\Users\\Mark-\\source\\colorls\\yaml\\mom.yaml");
+
+	return EXIT_SUCCESS;
 };
