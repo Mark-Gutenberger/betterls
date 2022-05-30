@@ -9,8 +9,8 @@
 
 #define FMT_HEADER_ONLY
 // #include "../include/fmt/format.h"
+#include "../include/fmt/color.h"
 #include "../include/fmt/core.h"
-
 
 #define RYML_SINGLE_HDR_DEFINE_NOW
 #include "../include/ryml.hpp"

@@ -1,12 +1,12 @@
 {
-	"name": "colorls",
+	"name": "betterls",
 	"version": "1.0.0",
 	"author": "Mark Gutenberger <Mark-Gutenberger@outlook.com>",
 	"license": "GPL-3.0",
 	"scripts": {
-		"start": "./bin/colorls",
-		"run": "./bin/colorls",
-		"main": "./bin/colorls",
+		"start": "./bin/betterls",
+		"run": "./bin/betterls",
+		"main": "./bin/betterls",
 		"compile": "make",
 		"clean": "make clean",
 		"install": "bash ./scripts/install-deps.sh",

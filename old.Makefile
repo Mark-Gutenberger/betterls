@@ -5,7 +5,7 @@ BIN = /bin/
 _TESTS = ./tests/
 OBJ = obj/
 OUT = $(_BIN)$(PLATFORM)/
-TARGET = colorls.cpp
+TARGET = betterls.cpp
 VERSION = $(shell . ./scripts/version.sh)
 CXX = g++
 CXXFLAGS = -std=c++2a
@@ -80,18 +80,18 @@ dev:
 
 compile:
 	$(SETC) $(RESET)
-	$(CXX) -c ./colorls.cpp -o $(_BIN)$(OBJ)colorls-$(PLATFORM)-$(VERSION).o  $(CXXFLAGS)
-	$(CXX) $(_BIN)$(OBJ)colorls-$(PLATFORM)-$(VERSION).o -o $(OUT)colorls-$(PLATFORM)-$(VERSION)  $(CXXFLAGS)
-	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION) $(OUT)colorls
-	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION) $(_BIN)colorls
-	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION) $(OUT)main
-	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION) $(_BIN)main
+	$(CXX) -c ./betterls.cpp -o $(_BIN)$(OBJ)betterls-$(PLATFORM)-$(VERSION).o  $(CXXFLAGS)
+	$(CXX) $(_BIN)$(OBJ)betterls-$(PLATFORM)-$(VERSION).o -o $(OUT)betterls-$(PLATFORM)-$(VERSION)  $(CXXFLAGS)
+	$(shell) cp $(OUT)betterls-$(PLATFORM)-$(VERSION) $(OUT)betterls
+	$(shell) cp $(OUT)betterls-$(PLATFORM)-$(VERSION) $(_BIN)betterls
+	$(shell) cp $(OUT)betterls-$(PLATFORM)-$(VERSION) $(OUT)main
+	$(shell) cp $(OUT)betterls-$(PLATFORM)-$(VERSION) $(_BIN)main
 	# copy files with 'exe' ext becuase sometimes msys does weird things
-	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION) $(OUT)colorls-$(PLATFORM)-$(VERSION).exe
-	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION).exe $(_BIN)colorls.exe
-	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION).exe $(OUT)colorls.exe
-	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION).exe $(_BIN)main.exe
-	$(shell) cp $(OUT)colorls-$(PLATFORM)-$(VERSION).exe $(OUT)main.exe
+	$(shell) cp $(OUT)betterls-$(PLATFORM)-$(VERSION) $(OUT)betterls-$(PLATFORM)-$(VERSION).exe
+	$(shell) cp $(OUT)betterls-$(PLATFORM)-$(VERSION).exe $(_BIN)betterls.exe
+	$(shell) cp $(OUT)betterls-$(PLATFORM)-$(VERSION).exe $(OUT)betterls.exe
+	$(shell) cp $(OUT)betterls-$(PLATFORM)-$(VERSION).exe $(_BIN)main.exe
+	$(shell) cp $(OUT)betterls-$(PLATFORM)-$(VERSION).exe $(OUT)main.exe
 	$(SETC) $(RESET)
 	@printf '\n'
 

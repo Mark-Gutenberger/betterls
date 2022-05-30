@@ -8,7 +8,7 @@ bin/
 package-lock.json
 mom
 main
-colorls
+betterls
 ./config.yaml
 !.gitkeep
 !*.gitkeep

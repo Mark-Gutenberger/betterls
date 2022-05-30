@@ -1,6 +1,6 @@
 # Add all the source files needed to build the executable
-add_executable(main ../colorls.cpp)
-add_executable(colorls ../colorls.cpp)
+add_executable(main ../betterls.cpp)
+add_executable(betterls ../betterls.cpp)
 
 configure_file(./version.h.in ./version.h)
 
@@ -11,4 +11,4 @@ configure_file(./version.h.in ./version.h)
 # # Link the executable and the library together
 # target_link_libraries(Project MyLibrary)
 
-target_include_directories(colorls PUBLIC "${PROJECT_BINARY_DIR}")
+target_include_directories(betterls PUBLIC "${PROJECT_BINARY_DIR}")
