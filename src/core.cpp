@@ -1,7 +1,7 @@
 #include "core.h"
 #include "config.cpp"
 
-betterls::yaml config;
+betterls::internal intern;
 
 namespace betterls {
 class main {
@@ -48,9 +48,9 @@ class main {
 		fmt::print("Platform: {}\n", PLATFORM);
 
 		if (__PLATFORM__ == 0) {
-			config.load_config_file("C:\\Users\\Mark-\\mom.yaml");
+			intern.load_config_file("C:\\Users\\Mark-\\mom.yaml");
 		} else if (__PLATFORM__ == 1) {
-			config.load_config_file("/mnt/c/Users/Mark-/mom.yaml");
+			intern.load_config_file("/mnt/c/Users/Mark-/mom.yaml");
 		} else {
 			fmt::print(stderr, "Error: {}\n", "Unknown platform");
 			exit(EXIT_FAILURE);
