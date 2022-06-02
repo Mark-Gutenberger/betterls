@@ -21,6 +21,8 @@ lint:
         # generated files
         - bin/**/*
         - bin/*
+        - include/**/*
+        - include/*
     #   - linters: [joemamalinter]
     # paths:
     #   - xyz

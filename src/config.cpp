@@ -2,7 +2,7 @@
 
 namespace betterls {
 class internal {
-   private:
+   public:
 	std::string get_file_contents(const char* filename) {
 		std::ifstream in(filename, std::ios::in | std::ios::binary);
 		if (!in) {
@@ -12,6 +12,12 @@ class internal {
 		std::ostringstream contents;
 		contents << in.rdbuf();
 		return contents.str();
+	};
+
+   public:
+	static void write_config_file() {
+		static std::string config_file = "~\\.config\\.betterlsrc.json";
+		fmt::print("config file: {}\n", config_file);
 	};
 
    public:

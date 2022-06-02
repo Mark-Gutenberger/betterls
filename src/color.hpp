@@ -1,7 +1,7 @@
 namespace betterls {
 class color {
    private:
-	static void to_color(){
+	void to_color(){
 
 	};
 

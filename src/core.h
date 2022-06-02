@@ -1,16 +1,13 @@
 #pragma once
 
-#include <stdio.h>
+#include <chrono>
+#include <filesystem>
+#include <iomanip>
 #include <iostream>
+#include <string>
 
-#include "version.h"
 #include "platform.h"
-
-#ifdef _WIN32
-#include "../include/dirent.h"
-#else
-#include <dirent.h>
-#endif
+#include "version.h"
 
 #define FMT_HEADER_ONLY
 // #include "../include/fmt/format.h"
