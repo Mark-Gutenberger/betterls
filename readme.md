@@ -6,7 +6,7 @@
 
 #### A platform Independent, configurable port of ls
 
-Inspired heavily by [@athityakumar's](https://github.com/athityakumar/) [ruby](https://www.ruby-lang.org/) version of [betterls](https://github.com/athityakumar/betterls/). While the interface and functionality of the the application is remarkable, there are some notable drawbacks provided by ruby, and some others simply by the difficulty of cross-platform development.
+Inspired heavily by [@athityakumar's](https://github.com/athityakumar/) [ruby](https://www.ruby-lang.org/) version of [colorls](https://github.com/athityakumar/colorls/). While the interface and functionality of the the application is remarkable, there are some notable drawbacks provided by ruby, and some others simply by the difficulty of cross-platform development.
 Primary goals of this project are the following:
 
 -   performance above all else :watch:
