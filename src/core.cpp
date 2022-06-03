@@ -8,10 +8,8 @@
 
 #include "../include/argh.h"
 
-namespace chrono = std::chrono;
 // #if __cplusplus >= 201703
 #include <filesystem>
-namespace fs = std::filesystem;
 // #else
 // #pragma message(">=C++17 is required.\ncontinue at your own sanity...")
 
@@ -24,15 +22,28 @@ class Core {
    private:
 	class Params {
 	   public:
-		int length;
+		std::string path{};
+		int length{};
+		bool hasPath{false};
+		bool callVerbose{};
+		bool callVersion{};
+		bool callHelp{};
+		bool callRecursive{};
+		bool callNoColor{};
+		bool callNoSort{};
+		bool callAll{};
+		bool callAlmost_all{};
+		std::vector<std::string> flags{};
+		// char* c = new char[length]();
 	};
 
    public:
-	Params params;
+	Params params{};
 
    private:
-	std::string perm_to_str(fs::perms prms) {
+	std::string permToStr(std::filesystem::perms prms) {
 		std::string result;
+
 		result.reserve(9);
 		for (int i = 0; i < 9; ++i) {
 			result = ((static_cast<int>(prms) & (1 << i)) ? "xwrxwrxwr"[i] : '-') + result;
@@ -44,34 +55,37 @@ class Core {
 	template <typename TP>
 	std::time_t to_time_t(TP tp) {
 		// Based on trick from: Nico Josuttis, C++17 - The Complete Guide
-		chrono::system_clock::duration dt =
-			chrono::duration_cast<chrono::system_clock::duration>(tp - TP::clock::now());
-		return chrono::system_clock::to_time_t(chrono::system_clock::now() + dt);
+		std::chrono::system_clock::duration dt =
+			std::chrono::duration_cast<std::chrono::system_clock::duration>(tp - TP::clock::now());
+		return std::chrono::system_clock::to_time_t(std::chrono::system_clock::now() + dt);
 	};
 
    public:
-	fs::path dir{"."};
+	std::filesystem::path dir{"."};	 // initialized as char "." BUT READ THE REST OF THE CODE..
 
-   public:
-	void is_arg_or_path(int argc, char* argv[]) {
+   private:
+	void parseParams(int argc, char* argv[]) {
+		// pass through arguments in the order they are passed.
 		for (int i = 0; i < argc; ++i) {
-			auto arg = fs::u8path(argv[i]);
-			try {
-				fs::is_directory(arg);
-			} catch (std::exception& e) {
-				std::cout << "hi mom (error....)\n";
-				std::cout << e.what();
+			auto arg = std::filesystem::u8path(argv[i]);
+			if (std::filesystem::is_directory(arg)) {
+				dir = arg;
+				params.hasPath = true;
+				params.path = arg.string();
+			};
+			if (!params.hasPath) {
+				params.path = std::filesystem::current_path().string();
+				dir = std::filesystem::current_path();
 			};
 			params.length = i;
 		};
-		dir = argv[1];
 	};
 
    public:
 	int ls(int argc, char* argv[]) {
-		is_arg_or_path(argc, argv);
-		for (auto const& de : fs::directory_iterator(dir)) {
-			auto fperms = (de.is_directory() ? "d" : "-") + perm_to_str(de.symlink_status().permissions()) + "  ";
+		parseParams(argc, argv);
+		for (auto const& de : std::filesystem::directory_iterator(dir)) {
+			auto fperms = (de.is_directory() ? "d" : "-") + permToStr(de.symlink_status().permissions()) + "  ";
 			auto fsize = (de.is_directory() ? "<DIR>" : std::to_string(de.file_size())) + "  ";
 			fsize = fmt::format("{:>{}}", fsize, 10);
 			auto fname = de.path().filename().string() + "\n";
@@ -90,8 +104,6 @@ class Core {
 			} else {
 				fmt::print("{}", fname);
 			};
-
-			fs::remove_all(dir);
 		};
 
 		argh::parser cmdl;
@@ -113,11 +125,6 @@ class Core {
 		// for (auto& flag : cmdl.flags())
 		// 	std::cout << '\t' << flag << "\n";
 
-		// std::cout << "\nParameters:\n";
-		// for (auto& param : cmdl.params())
-		// 	std::cout << '\t' << param.first << " : " << param.second << "\n";
-
-		// std::cout << "\nparams.length: " << params.length;
 		return EXIT_SUCCESS;
 	};
 };	// class main

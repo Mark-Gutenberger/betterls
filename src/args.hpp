@@ -6,22 +6,5 @@
 #include "../include/argh.h"
 
 namespace betterls {
-class Core {
-   private:
-	class Args {
-	   public:
-		bool verbose{};
-		bool version{};
-		bool help{};
-		bool recursive{};
-		bool follow_symlinks{};
-		bool no_color{};
-		bool no_sort{};
-		bool all{};
-		bool almost_all{};
-	};
-
-   public:
-	Args args;
-};
+class Core {};
 };	// namespace betterls
