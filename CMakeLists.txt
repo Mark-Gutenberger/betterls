@@ -10,26 +10,6 @@ project(
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# message(STATUS "CMAKE_PROJECT_VERSION = ${CMAKE_PROJECT_VERSION}")
-# message(STATUS "CMAKE_PROJECT_NAME = ${CMAKE_PROJECT_NAME}")
-# message(STATUS "CMAKE_GENERATOR = ${CMAKE_GENERATOR}")
-# message(STATUS "CMAKE_CXX_COMPILER = ${CMAKE_CXX_COMPILER}")
-# message(STATUS "CMAKE_CXX_STANDARD = ${CMAKE_CXX_STANDARD}\n")
-
-# Add all the source files needed to build the executable
-# configure_file(./src/version.h.in ./src/version.h)
-# add_executable(betterls ./src/betterls.cpp)
-
-
-# # Include the directory where MyLibrary project is. Otherwise, we can't use the
-# # library
-# add_subdirectory(libraries/MyLibrary)
-
-# # Link the executable and the library together
-# target_link_libraries(Project MyLibrary)
-
-###################################################
-
 include(cmake/StandardSettings.cmake)
 include(cmake/StaticAnalyzers.cmake)
 include(cmake/Utils.cmake)
