@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include "../include/argh.h"
+#include <argh/argh.h>
 
 namespace betterls {
 class Core {};

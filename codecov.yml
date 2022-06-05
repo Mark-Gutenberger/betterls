@@ -1,0 +1,6 @@
+ignore:
+  - "test"
+  - "include"
+
+comment:
+  require_changes: true

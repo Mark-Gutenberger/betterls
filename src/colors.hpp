@@ -1,9 +1,9 @@
 #pragma once
 
 #define FMT_HEADER_ONLY
-#include "../include/fmt/color.h"
-#include "../include/fmt/core.h"
-#include "../include/fmt/format.h"
+#include <fmt/color.h>
+#include <fmt/core.h>
+#include <fmt/format.h>
 
 /*
 alice_blue = 0xF0F8FF,               // rgb(240,248,255)

@@ -1,8 +1,8 @@
+#include </rapidjson/document.h>	  // rapidjson's DOM-style API
+#include </rapidjson/prettywriter.h>  // for stringify JSON
 #include <cstdio>
 #include <fstream>
 #include <iostream>
-#include "../include/rapidjson/document.h"		// rapidjson's DOM-style API
-#include "../include/rapidjson/prettywriter.h"	// for stringify JSON
 namespace betterls {
 class Config {
 	void mom() {

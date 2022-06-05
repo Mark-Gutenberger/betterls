@@ -12,9 +12,8 @@
 #include <vector>
 
 #include "platform.h"
-#include "version.h"
 
 #define FMT_HEADER_ONLY
-#include "../include/fmt/chrono.h"
-#include "../include/fmt/core.h"
-#include "../include/fmt/format.h"
+#include <fmt/chrono.h>
+#include <fmt/core.h>
+#include <fmt/format.h>

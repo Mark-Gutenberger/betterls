@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 
-#include "../include/argh.h"
+#include <argh/argh.h>
 
 // #if __cplusplus >= 201703
 #include <filesystem>

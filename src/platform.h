@@ -10,4 +10,4 @@
 #define __PLATFORM__ 1
 #endif
 
-#endif // PLATFORM
+#endif	// PLATFORM
