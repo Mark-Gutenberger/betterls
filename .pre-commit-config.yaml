@@ -7,4 +7,3 @@ repos:
     rev: 0.1.1
     hooks:
       - id: trunk.io
-      - id: clang-format

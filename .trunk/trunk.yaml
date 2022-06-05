@@ -2,14 +2,6 @@ version: 0.1
 cli:
   version: 0.12.1-beta
 lint:
-  linters:
-    - name: "cmakelang"
-      type: rewrite
-      files: [ALL]
-      command: ["${workspace}/bin/foo", "--file", "${target}"]
-      read_output_from: stdout
-      run_linter_from: workspace
-      success_codes: [0, 1]
   enabled:
     - clang-format@15.0.0
     - gitleaks@8.3.0
