@@ -3,8 +3,8 @@ repos:
     rev: v0.6.13
     hooks:
       - id: cmake-format
-#   - repo: https://github.com/mark-gutenberger/betterls
-#     # rev: v0.1.0
-#     hooks:
-#       - id: trunk.io
-#       - id: clang-format
+  - repo: https://github.com/mark-gutenberger/trunkio-precommit-hook
+    rev: 0.1.1
+    hooks:
+      - id: trunk.io
+      - id: clang-format
