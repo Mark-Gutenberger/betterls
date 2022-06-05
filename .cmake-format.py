@@ -25,7 +25,7 @@ with section("format"):
     disable = False
 
     # How wide to allow formatted cmake files
-    line_width = 120
+    line_width = 135
 
     # How many spaces to tab for indent
     tab_size = 4
