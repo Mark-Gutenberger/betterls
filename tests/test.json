@@ -1,0 +1,20 @@
+{
+	"string": "string",
+	"int": 5,
+	"float": 5.2,
+	"bool": true,
+	"intArray": [1, 2, 5, 8],
+	"stringArray": ["string", "string2", "hi mom"],
+	"boolArray": [true, false, true],
+	"floatArray": [1.2, 3.4, 5.6],
+	"mixedArray": [1, "string", true, 5.2],
+	"null": null,
+	"object": {
+		"string": "string",
+		"int": 56,
+		"float": 1.25,
+		"bool": true,
+		"null": null,
+		"array": [1, 2, 3]
+	}
+}
