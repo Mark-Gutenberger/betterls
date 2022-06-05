@@ -1,0 +1,18 @@
+---
+# This file tells https://pre-commit.com/
+# which hooks are provided by this repo
+# for use by other git repos.
+
+- id: clang-format
+  name: clang-format
+  entry: clang-format-hook
+  description: Formats C, C++, Objective-C, and Java code
+  types_or: [c, c++, c#, objective-c, java]
+  language: python
+
+- id: trunk.io
+  name: trunk.io
+  entry: trunk.io-hook
+  description: runs trunk.io (and you should too)
+  types_or: [asm, bash, c, c++, dockerfile, header, json, makefile, manifest, markdown, powershell, python, python3, yaml]
+  language: python

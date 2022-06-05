@@ -107,6 +107,7 @@
 		"**/Thumbs.db": false
 	},
 	"yaml.schemas": {
-		"https://json.schemastore.org/pre-commit-config.json": "file:///c%3A/Users/Mark-/source/betterls/.pre-commit-hooks.yaml"
-	}
+		"https://json.schemastore.org/pre-commit-hooks.json": "file:///c%3A/Users/Mark-/source/betterls/.pre-commit-hooks.yaml"
+	},
+	"python.formatting.provider": "autopep8"
 }

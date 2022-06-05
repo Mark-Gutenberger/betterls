@@ -1,15 +1,7 @@
-set(sources
-    src/betterls.cpp
-)
+set(sources src/betterls.cpp)
 
-set(exe_sources
-		${sources}
-)
+set(exe_sources ${sources})
 
-set(headers
-    include/betterls/betterls.hpp
-)
+set(headers include/betterls/betterls.hpp)
 
-set(test_sources
-#   src/tmp_test.cpp
-)
+set(test_sources)

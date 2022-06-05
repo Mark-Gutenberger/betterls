@@ -3,7 +3,8 @@ repos:
     rev: v0.6.13
     hooks:
       - id: cmake-format
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
-    hooks:
-      - id: end-of-file-fixer
+#   - repo: https://github.com/mark-gutenberger/betterls
+#     # rev: v0.1.0
+#     hooks:
+#       - id: trunk.io
+#       - id: clang-format
