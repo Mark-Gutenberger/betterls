@@ -12,6 +12,6 @@ install:
 build_script:
   - mkdir build && cd build
   - cmake ..
-  - MSBuild Example.sln /p:Configuration=%configuration% /p:Platform="Win32" /nologo /m /verbosity:minimal
+  - MSBuild betterls.sln /p:Configuration=%configuration% /p:Platform="Win32" /nologo /m /verbosity:minimal
   - OpenCppCoverage --export_type cobertura:coverage.xml --modules "*.exe" --cover_children -- ctest -C %configuration% --output-on-failure
   - codecov -f coverage.xml --root %APPVEYOR_BUILD_FOLDER%
