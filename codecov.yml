@@ -1,9 +1,0 @@
-ignore:
-  - "test"
-  - "include"
-
-comment:
-  require_changes: true
-
-codecov:
-  token: 9cd8eb0d-6759-40cd-b704-169b990e8fb6
