@@ -8,6 +8,7 @@
 [![codecov](https://codecov.io/gh/mark-gutenberger/betterls/branch/master/graph/badge.svg)](https://codecov.io/gh/mark-gutenberger/betterls)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mark-gutenberger/betterls)](https://github.com/mark-gutenberger/betterls/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
+[![c++20]](https://img.shields.io/badge/C%2B%2B-20-pink.svg)
 
 
 Betterls is largely inspired by [colorls](https://github.com/athityakumar/colorls/) (written in ruby :gem:). betterls is entirely written in C and C++, in as bare metal code as possible. development is platform driven and *Yes, yes it does work on Windows.* betterls takes GNU coreutil `ls` and supercharges :superhero: it, giving it *configurable* colored output, and configurable icons via a [nerdfont](https://www.nerdfonts.com/).
