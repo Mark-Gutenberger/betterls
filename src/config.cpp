@@ -1,5 +1,5 @@
-#include </rapidjson/document.h>	  // rapidjson's DOM-style API
-#include </rapidjson/prettywriter.h>  // for stringify JSON
+#include <rapidjson/document.h>		 // rapidjson's DOM-style API
+#include <rapidjson/prettywriter.h>	 // for stringify JSON
 #include <cstdio>
 #include <fstream>
 #include <iostream>
@@ -13,8 +13,7 @@ class Config {
 		if (myfile.is_open()) {
 			// meta equivalent to of `for lines in file`
 			while (myfile) {
-				std::getline(myfile, myline);
-				std::cout << myline << '\n';
+				std::cout << myline;
 			}
 		} else {
 			std::cout << "Couldn't open file\n";

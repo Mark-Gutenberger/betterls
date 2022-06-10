@@ -1,5 +1,22 @@
-#include "core.hpp"
-#include "colors.hpp"
+#include <betterls/colors.hpp>
+#include <chrono>
+#include <ctime>
+// #include <cmath>
+// #include <array>
+#include <filesystem>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+#include <string>
+#include <vector>
+
+#include "platform.h"
+
+#define FMT_HEADER_ONLY
+#include <fmt/chrono.h>
+#include <fmt/color.h>
+#include <fmt/core.h>
+#include <fmt/format.h>
 
 #include <cstdlib>
 #include <exception>
@@ -96,11 +113,11 @@ class Core {
 			fmt::print("{}", ftime);
 			fmt::print("{}", fsize);
 			if (de.is_symlink()) {
-				fmt::print(fg(fmt::color::red), "{}", fname);
+				fmt::print(fmt::fg(red), "{}", fname);
 			} else if (de.is_directory()) {
-				fmt::print(fg(fmt::color::blue), "{}", fname);
+				fmt::print(fmt::fg(blue), "{}", fname);
 			} else if (de.is_regular_file()) {
-				fmt::print(fg(fmt::color::green), "{}", fname);
+				fmt::print(fmt::fg(green), "{}", fname);
 			} else {
 				fmt::print("{}", fname);
 			};

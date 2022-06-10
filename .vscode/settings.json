@@ -1,4 +1,23 @@
 {
+	// "C_Cpp.errorSquiggles": "Disabled",
+	"files.exclude": {
+		"**/.git": false,
+		"**/.svn": false,
+		"**/.hg": false,
+		"**/CVS": false,
+		"**/.DS_Store": false,
+		"**/Thumbs.db": false
+	},
+	"C_Cpp.default.includePath": ["include", "${default}"],
+	"[c]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
+	"[cpp]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
+	"[cmake]": {
+		"editor.defaultFormatter": "cheshirekow.cmake-format"
+	},
 	"files.associations": {
 		"*.ejs": "html",
 		"*.cps": "javascript",
@@ -95,19 +114,8 @@
 		"numeric": "cpp",
 		"random": "cpp",
 		"string_view": "cpp",
-		"numbers": "cpp"
-	},
-	"C_Cpp.errorSquiggles": "Disabled",
-	"files.exclude": {
-		"**/.git": false,
-		"**/.svn": false,
-		"**/.hg": false,
-		"**/CVS": false,
-		"**/.DS_Store": false,
-		"**/Thumbs.db": false
-	},
-	"yaml.schemas": {
-		"https://json.schemastore.org/pre-commit-hooks.json": "file:///c%3A/Users/Mark-/source/betterls/.pre-commit-hooks.yaml"
-	},
-	"python.formatting.provider": "autopep8"
+		"numbers": "cpp",
+		"regex": "cpp",
+		"xhash": "cpp"
+	}
 }
