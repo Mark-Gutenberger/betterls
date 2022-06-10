@@ -9,24 +9,20 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
-#include "platform.h"
-
+// #include "platform.h"
+#include <betterls/betterls.hpp>
 #define FMT_HEADER_ONLY
+#include <argh/argh.h>
 #include <fmt/chrono.h>
 #include <fmt/color.h>
 #include <fmt/core.h>
 #include <fmt/format.h>
-
 #include <cstdlib>
 #include <exception>
+#include <filesystem>
 #include <iostream>
 #include <string>
-
-#include <argh/argh.h>
-
 // #if __cplusplus >= 201703
-#include <filesystem>
 // #else
 // #pragma message(">=C++17 is required.\ncontinue at your own sanity...")
 
@@ -66,7 +62,7 @@ class Core {
 			result = ((static_cast<int>(prms) & (1 << i)) ? "xwrxwrxwr"[i] : '-') + result;
 		};
 		return result;
-	};
+	}
 
    private:
 	template <typename TP>
@@ -75,7 +71,7 @@ class Core {
 		std::chrono::system_clock::duration dt =
 			std::chrono::duration_cast<std::chrono::system_clock::duration>(tp - TP::clock::now());
 		return std::chrono::system_clock::to_time_t(std::chrono::system_clock::now() + dt);
-	};
+	}
 
    public:
 	std::filesystem::path dir{"."};	 // initialized as char "." BUT READ THE REST OF THE CODE..
@@ -96,7 +92,7 @@ class Core {
 			};
 			params.length = i;
 		};
-	};
+	}
 
    public:
 	int ls(int argc, char* argv[]) {
@@ -143,6 +139,6 @@ class Core {
 		// 	std::cout << '\t' << flag << "\n";
 
 		return EXIT_SUCCESS;
-	};
+	}
 };	// class main
-};	// namespace betterls
+}  // namespace betterls

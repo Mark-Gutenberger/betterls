@@ -1,0 +1,15 @@
+{
+	"unwantedRecommendations": [
+		"ms-vscode.cmake-tools",
+		"xaver.clang-format",
+		"notskm.clang-tidy",
+		"llvm-vs-code-extensions.vscode-clangd"
+	],
+	"recommendations": [
+		"ms-vscode.cpptools",
+		"jeff-hykin.better-cpp-syntax",
+		"twxs.cmake",
+		"cheshirekow.cmake-format",
+		"trunk.io"
+	]
+}
