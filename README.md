@@ -5,7 +5,6 @@
 [![Actions Status](https://github.com/mark-gutenberger/betterls/workflows/MacOS/badge.svg)](https://github.com/mark-gutenberger/betterls/actions)
 [![Actions Status](https://github.com/mark-gutenberger/betterls/workflows/Windows/badge.svg)](https://github.com/mark-gutenberger/betterls/actions)
 [![Actions Status](https://github.com/mark-gutenberger/betterls/workflows/Ubuntu/badge.svg)](https://github.com/mark-gutenberger/betterls/actions)
-[![codecov](https://codecov.io/gh/mark-gutenberger/betterls/branch/master/graph/badge.svg)](https://codecov.io/gh/mark-gutenberger/betterls)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mark-gutenberger/betterls)](https://github.com/mark-gutenberger/betterls/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
 [![c++20](https://img.shields.io/badge/C%2B%2B-20-magenta.svg)](https://en.m.wikipedia.org/wiki/C%2B%2B20)
