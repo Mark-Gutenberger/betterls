@@ -1,58 +1,23 @@
+// deps
+#include <argh/argh.h>
+#include <betterls/betterls.hpp>
 #include <betterls/colors.hpp>
+#define FMT_HEADER_ONLY
+#include <fmt/chrono.h>
+#include <fmt/color.h>
+#include <fmt/core.h>
+// std
 #include <chrono>
 #include <ctime>
-// #include <cmath>
-// #include <array>
 #include <filesystem>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <string>
 #include <vector>
-// #include "platform.h"
-#include <betterls/betterls.hpp>
-#define FMT_HEADER_ONLY
-#include <argh/argh.h>
-#include <fmt/chrono.h>
-#include <fmt/color.h>
-#include <fmt/core.h>
-#include <fmt/format.h>
-#include <cstdlib>
-#include <exception>
-#include <filesystem>
-#include <iostream>
-#include <string>
-// #if __cplusplus >= 201703
-// #else
-// #pragma message(">=C++17 is required.\ncontinue at your own sanity...")
-
-// #include <experimental/filesystem>
-// namespace fs = std::experimental::filesystem;
-// #endif
 
 namespace betterls {
 class Core {
-   private:
-	class Params {
-	   public:
-		std::string path{};
-		int length{};
-		bool hasPath{false};
-		bool callVerbose{};
-		bool callVersion{};
-		bool callHelp{};
-		bool callRecursive{};
-		bool callNoColor{};
-		bool callNoSort{};
-		bool callAll{};
-		bool callAlmost_all{};
-		std::vector<std::string> flags{};
-		// char* c = new char[length]();
-	};
-
-   public:
-	Params params{};
-
    private:
 	std::string permToStr(std::filesystem::perms prms) {
 		std::string result;
@@ -81,16 +46,6 @@ class Core {
 		// pass through arguments in the order they are passed.
 		for (int i = 0; i < argc; ++i) {
 			auto arg = std::filesystem::u8path(argv[i]);
-			if (std::filesystem::is_directory(arg)) {
-				dir = arg;
-				params.hasPath = true;
-				params.path = arg.string();
-			};
-			if (!params.hasPath) {
-				params.path = std::filesystem::current_path().string();
-				dir = std::filesystem::current_path();
-			};
-			params.length = i;
 		};
 	}
 

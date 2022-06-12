@@ -11,10 +11,4 @@ if (!u8guard.valid()) {
 };
 #endif	// GHC_FILESYSTEM_VERSION
 
-	// namespace betterls {
-	// int add(int a, int b) {
-	// 	return a + b;
-	// };
-	// };	// namespace betterls
-
 #endif	// BETTERLS_HPP

@@ -117,5 +117,6 @@
 		"numbers": "cpp",
 		"regex": "cpp",
 		"xhash": "cpp"
-	}
+	},
+	"C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }

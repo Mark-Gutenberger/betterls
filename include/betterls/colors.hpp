@@ -1,9 +1,9 @@
 #pragma once
+
 #define FMT_HEADER_ONLY
 #include <fmt/color.h>
 #include <fmt/core.h>
 #include <array>
-#include <iostream>
 #include <string>
 
 const int color_n = 141;
